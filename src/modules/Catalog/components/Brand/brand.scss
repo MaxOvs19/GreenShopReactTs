@@ -1,0 +1,14 @@
+p {
+  cursor: pointer;
+  transition: 0.4s;
+
+  &:hover {
+    color: #46a358;
+    transition: 0.4s;
+  }
+}
+.active {
+  &-brand {
+    color: #46a358;
+  }
+}

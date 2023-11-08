@@ -1,0 +1,119 @@
+[
+  {
+    "type": "simple",
+    "id": 1,
+    "sku": "s1",
+    "title": "Barberton Daisy",
+    "regular_price": {
+      "currency": "USD",
+      "value": 119.00
+    },
+    "image": "/img/product1.png",
+    "brand": 9,
+    "quantity": 1
+  },
+  {
+    "type": "simple",
+    "id": 2,
+    "sku": "s2",
+    "title": "Angel Wing Begonia",
+    "regular_price": {
+      "currency": "USD",
+      "value": 119.00
+    },
+    "image": "/img/product2.png",
+    "brand": 8,
+    "quantity": 1
+  },
+  {
+    "type": "simple",
+    "id": 3,
+    "sku": "s3",
+    "title": "Beach Spider Lily",
+    "regular_price": {
+      "currency": "USD",
+      "value": 220.00
+    },
+    "image": "/img/product3.png",
+    "brand": 2,
+    "quantity": 1
+  },
+  {
+    "type": "simple",
+    "id": 4,
+    "sku": "s4",
+    "title": "Blushing Bromeliad",
+    "regular_price": {
+      "currency": "USD",
+      "value": 199.00
+    },
+    "image": "/img/product2.png",
+    "brand": 7,
+    "quantity": 1
+  },
+  {
+    "type": "simple",
+    "id": 5,
+    "sku": "s5",
+    "title": "Bird's Nest Fern",
+    "regular_price": {
+      "currency": "USD",
+      "value": 169.00
+    },
+    "image": "/img/product1.png",
+    "brand": 3,
+    "quantity": 1
+  },
+  {
+    "type": "simple",
+    "id": 6,
+    "sku": "s6",
+    "title": "Broadleaf Lady Palm",
+    "regular_price": {
+      "currency": "USD",
+      "value": 129.00
+    },
+    "image": "/img/product3.png",
+    "brand": 6,
+    "quantity": 1
+  },
+  {
+    "type": "simple",
+    "id": 7,
+    "sku": "s7",
+    "title": "Aluminum Plant",
+    "regular_price": {
+      "currency": "USD",
+      "value": 90.00
+    },
+    "image": "/img/product1.png",
+    "brand": 5,
+    "quantity": 1
+  },
+  {
+    "type": "simple",
+    "id": 8,
+    "sku": "s8",
+    "title": "Chinese Evergreen",
+    "regular_price": {
+      "currency": "USD",
+      "value": 139.00
+    },
+    "image": "/img/product2.png",
+    "brand": 1,
+    "quantity": 1
+  },
+  {
+    "type": "simple",
+    "id": 9,
+    "sku": "s9",
+    "title": "African Violet",
+    "regular_price": {
+      "currency": "USD",
+      "value": 149.00
+    },
+    "image": "/img/product3.png",
+    "brand": 2,
+    "quantity": 1
+  }
+]

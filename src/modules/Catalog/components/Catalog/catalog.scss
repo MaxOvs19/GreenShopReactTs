@@ -1,0 +1,32 @@
+.catalog {
+  margin-top: 47px;
+  display: flex;
+  gap: 50px;
+
+  &-body {
+    width: 100%;
+    &__title {
+      display: flex;
+      flex-direction: row;
+      gap: 37px;
+
+      p {
+        transition: 0.4s;
+        cursor: pointer;
+
+        &:hover {
+          color: #46a358;
+          transition: 0.4s;
+        }
+      }
+    }
+
+    &__list {
+      margin-top: 31px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 50px;
+    }
+  }
+}

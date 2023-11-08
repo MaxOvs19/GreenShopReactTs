@@ -1,0 +1,72 @@
+.header {
+  position: relative;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  margin: 0 auto;
+  color: #3d3d3d;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-bottom: 1px solid rgba(70, 163, 88, 0.5);
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+    p {
+      cursor: pointer;
+      transition: 0.4s;
+
+      &:hover {
+        color: #46a358;
+        transition: 0.4s;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #3d3d3d;
+    }
+  }
+
+  &__login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+
+    &-button {
+      padding: 8px 17px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+  }
+
+  &__basket {
+    position: relative;
+
+    &-count {
+      padding-bottom: 1px;
+      top: 0;
+      right: -7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      width: 12px;
+      height: 12px;
+      background-color: #46a358;
+      position: absolute;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+}
