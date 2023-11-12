@@ -1,21 +1,17 @@
-import SideBar from '../SideBar/SideBar';
 import { useEffect, useState } from 'react';
 
-import { getProducts, load } from 'modules/Shop/store/productSlise';
-import { useDispatch, useSelector } from 'react-redux';
+import { load } from 'modules/Shop/store/productSlise';
+import { useDispatch } from 'react-redux';
 
-import ProductCard from 'components/ProductCard/ProductCard';
-import { IProduct } from 'interfaces/product.interface';
+import SideBar from '../SideBar/SideBar';
+import Catalog from '../Catalog/Catalog';
 
 import './shop.scss';
 
-interface IProps {
-  products: IProduct[];
-}
+const Shop = () => {
+  const url = 'http://localhost:5000/api/shop/get-products';
 
-const Shop = ({ products }: IProps) => {
-  console.log(products);
-
+  const [productData, setProductData] = useState([]);
   const dispath = useDispatch();
 
   const loadProduct = () => {
@@ -23,21 +19,26 @@ const Shop = ({ products }: IProps) => {
     document.querySelector('.sideBar-list p.active-brand')?.classList.remove('active-brand');
   };
 
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((res) => setProductData(res.products))
+      .catch((error) => error);
+
+    dispath(load(productData));
+  }, []);
+
   return (
-    <div className="catalog">
+    <div className="shop">
       <SideBar />
-      <div className="catalog-body">
-        <div className="catalog-body__title">
+      <div className="shop-body">
+        <div className="shop-body__title">
           <p onClick={loadProduct}>All Plants</p>
           <p>New Arrivals</p>
           <p>Sale</p>
         </div>
 
-        <div className="catalog-body__list">
-          {products.map((item: IProduct, index: number) => {
-            return <ProductCard key={index} productInfo={item} />;
-          })}
-        </div>
+        <Catalog products={productData} />
       </div>
     </div>
   );
