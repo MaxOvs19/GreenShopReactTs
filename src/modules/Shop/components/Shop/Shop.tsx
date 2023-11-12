@@ -1,23 +1,25 @@
 import SideBar from '../SideBar/SideBar';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-import { getProducts, load } from 'modules/Catalog/store/productSlise';
+import { getProducts, load } from 'modules/Shop/store/productSlise';
 import { useDispatch, useSelector } from 'react-redux';
 
 import ProductCard from 'components/ProductCard/ProductCard';
 import { IProduct } from 'interfaces/product.interface';
 
-import './catalog.scss';
-import { productApi } from 'modules/Catalog/api/getProducts';
+import './shop.scss';
 
-const Catalog = () => {
-  console.log(productApi);
-  
-  const allProduct = useSelector(getProducts);
+interface IProps {
+  products: IProduct[];
+}
+
+const Shop = ({ products }: IProps) => {
+  console.log(products);
+
   const dispath = useDispatch();
 
   const loadProduct = () => {
-    dispath(load());
+    // dispath(load());
     document.querySelector('.sideBar-list p.active-brand')?.classList.remove('active-brand');
   };
 
@@ -32,7 +34,7 @@ const Catalog = () => {
         </div>
 
         <div className="catalog-body__list">
-          {allProduct.map((item: IProduct, index: number) => {
+          {products.map((item: IProduct, index: number) => {
             return <ProductCard key={index} productInfo={item} />;
           })}
         </div>
@@ -41,4 +43,4 @@ const Catalog = () => {
   );
 };
 
-export default Catalog;
+export default Shop;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './brand.scss';
 import { useDispatch } from 'react-redux';
-import { filterToBrand, load } from 'modules/Catalog/store/productSlise';
+import { filterToBrand, load } from 'modules/Shop/store/productSlise';
 
 interface IProps {
   title: string;
@@ -17,7 +17,7 @@ const Brand = ({ id, title, indexItem, selectedIndex, setActiveBrand }: IProps) 
 
   const sortProduct = (id: number) => {
     setActiveBrand();
-    dispath(load());
+    // dispath(load());
     dispath(filterToBrand(id));
   };
 

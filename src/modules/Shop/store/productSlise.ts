@@ -1,19 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
-import product from 'modules/Catalog/components/Catalog/products.json';
+import { IProduct } from 'interfaces/product.interface';
 
 const initialState = {
-  products: product,
+  products: [],
 };
 
 export const productSlise = createSlice({
   name: 'products',
   initialState,
   reducers: {
-    load: (state) => {
-      state.products = initialState.products;
+    load: (state, action) => {
+      state.products = action.payload;
     },
     filterToBrand: (state, action) => {
-      state.products = state.products.filter((item) => item.brand === action.payload);
+      state.products = state.products.filter((item: IProduct) => item.brand === action.payload);
     },
   },
 });

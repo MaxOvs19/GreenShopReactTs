@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import brands from 'modules/Catalog/components/SideBar/brands.json';
+import brands from 'modules/Shop/components/SideBar/brands.json';
 
 const initialState = {
   brands: brands,

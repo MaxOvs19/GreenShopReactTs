@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import products from 'modules/Catalog/store/productSlise';
-import brands from 'modules/Catalog/store/brandsSlise';
+import products from 'modules/Shop/store/productSlise';
+import brands from 'modules/Shop/store/brandsSlise';
 import basket from 'modules/SelectedProducts/store/basketSlise';
 
 export const store = configureStore({
