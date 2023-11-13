@@ -6,8 +6,11 @@ import Brand from '../Brand/Brand';
 
 import './sideBar.scss';
 
-const SideBar = () => {
-  const brands = useSelector(getBrands);
+interface IProps {
+  brands: IBrand[];
+}
+
+const SideBar = ({ brands }: IProps) => {
   const [indexBrand, setIndexBrand] = useState<number>(-1);
 
   const selectBrand = (index: number) => {

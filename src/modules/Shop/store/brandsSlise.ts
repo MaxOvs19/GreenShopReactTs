@@ -2,15 +2,15 @@ import { createSlice } from '@reduxjs/toolkit';
 import brands from 'modules/Shop/components/SideBar/brands.json';
 
 const initialState = {
-  brands: brands,
+  brands: [],
 };
 
 export const brandsSlise = createSlice({
   name: 'brands',
   initialState,
   reducers: {
-    loadBrand: (state) => {
-      state.brands = initialState.brands;
+    loadBrand: (state, action) => {
+      state.brands = action.payload;
     },
   },
 });
