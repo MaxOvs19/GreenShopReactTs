@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 import { IBrand } from 'modules/Shop/interface/brand.interface';
-import { getBrands } from 'modules/Shop/store/brandsSlise';
 import Brand from '../Brand/Brand';
 
 import './sideBar.scss';

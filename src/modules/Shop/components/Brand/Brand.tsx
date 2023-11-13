@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 
 import './brand.scss';
-import { useDispatch, useSelector } from 'react-redux';
-import {
-  filterToBrand,
-  getFilteredProducts,
-  getProducts,
-  load,
-} from 'modules/Shop/store/productSlise';
+import { useDispatch } from 'react-redux';
+import { filterToBrand } from 'modules/Shop/store/productSlise';
 
 interface IProps {
   title: string;

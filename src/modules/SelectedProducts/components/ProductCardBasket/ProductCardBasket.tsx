@@ -23,13 +23,13 @@ const ProductCardBasket = ({ image, price, sku, title, id }: IProductCardBasket)
   const [quantity, setQuantity] = useState(1);
 
   const increment = () => {
-    setQuantity(quantity + 1);
     dispath(addQuantity(id));
+    setQuantity(quantity + 1);
   };
 
   const decrement = () => {
+    // dispath(removeQuantity(id));
     setQuantity(quantity - 1);
-    dispath(removeQuantity(id));
   };
 
   const deleteCardInVasket = (id: number) => {

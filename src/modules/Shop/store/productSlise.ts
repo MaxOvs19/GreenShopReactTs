@@ -15,7 +15,7 @@ export const productSlise = createSlice({
   name: 'products',
   initialState,
   reducers: {
-    load: (state, action) => {
+    loadProduct: (state, action) => {
       state.products = action.payload;
     },
     filterToBrand: (state, action) => {
@@ -29,7 +29,7 @@ export const productSlise = createSlice({
   },
 });
 
-export const { load, filterToBrand, clearFilter } = productSlise.actions;
+export const { loadProduct, filterToBrand, clearFilter } = productSlise.actions;
 
 export const getProducts = (state: any) => state.products.products;
 export const getFilteredProducts = (state: any) => state.products.filterProduct;

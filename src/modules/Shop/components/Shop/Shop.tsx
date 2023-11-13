@@ -4,15 +4,15 @@ import {
   clearFilter,
   getFilteredProducts,
   getProducts,
-  load,
+  loadProduct,
 } from 'modules/Shop/store/productSlise';
+import { getBrands, loadBrand } from 'modules/Shop/store/brandsSlise';
 import { useDispatch, useSelector } from 'react-redux';
 
 import SideBar from '../SideBar/SideBar';
 import Catalog from '../Catalog/Catalog';
 
 import './shop.scss';
-import { getBrands, loadBrand } from 'modules/Shop/store/brandsSlise';
 
 const Shop = () => {
   const urlProduct = 'http://localhost:5000/api/shop/get-products';
@@ -26,13 +26,13 @@ const Shop = () => {
   const productsFilters = useSelector(getFilteredProducts);
   const brands = useSelector(getBrands);
 
-  const loadProduct = () => {
+  const removeFilter = () => {
     dispath(clearFilter());
     document.querySelector('.sideBar-list p.active-brand')?.classList.remove('active-brand');
   };
 
   useEffect(() => {
-    dispath(load(productData));
+    dispath(loadProduct(productData));
   }, [productData]);
 
   useEffect(() => {
@@ -57,7 +57,7 @@ const Shop = () => {
 
       <div className="shop-body">
         <div className="shop-body__title">
-          <p onClick={loadProduct}>All Plants</p>
+          <p onClick={removeFilter}>All Plants</p>
           <p>New Arrivals</p>
           <p>Sale</p>
         </div>
