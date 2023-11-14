@@ -21,10 +21,6 @@ export const basketSlise = createSlice({
     },
     addQuantity: (state, action) => {
       state.basket.find((item) => {
-        // if (item.quantity === undefined) {
-        //   item.quantity = 1;
-        // }
-
         if (item.id === action.payload) {
           item.quantity += 1;
         }

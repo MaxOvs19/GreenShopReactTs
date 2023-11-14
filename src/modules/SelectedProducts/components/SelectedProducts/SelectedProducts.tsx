@@ -31,6 +31,7 @@ const SelectedProducts = () => {
                 totalPrice += item.quantity * item.regular_price.value;
                 return (
                   <ProductCardBasket
+                    quantity={item.quantity}
                     image={item.image}
                     price={item.regular_price.value}
                     sku={item.sku}
@@ -62,7 +63,7 @@ const SelectedProducts = () => {
         </div>
 
         <div className="selected-products__order-item">
-          <p>Subtotal</p> <span>${totalPrice}</span>
+          <p>Subtotal</p> <span>${totalPrice.toFixed(2)}</span>
         </div>
         <div className="selected-products__order-item">
           <p>Coupon Discount</p> <span>(-) 00.00</span>
@@ -73,7 +74,7 @@ const SelectedProducts = () => {
         </div>
         <div className="selected-products__order-item total">
           <p>Total</p>
-          <span>${totalPrice}</span>
+          <span>${totalPrice.toFixed(2)}</span>
         </div>
         <BaseButton styles="buy">Proceed To Checkout</BaseButton>
       </div>

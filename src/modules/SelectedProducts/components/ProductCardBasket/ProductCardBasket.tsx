@@ -15,21 +15,19 @@ interface IProductCardBasket {
   title: string;
   sku: string;
   price: number;
+  quantity: number;
   id: number;
 }
 
-const ProductCardBasket = ({ image, price, sku, title, id }: IProductCardBasket) => {
+const ProductCardBasket = ({ image, price, sku, title, quantity, id }: IProductCardBasket) => {
   const dispath = useDispatch();
-  const [quantity, setQuantity] = useState(1);
 
   const increment = () => {
     dispath(addQuantity(id));
-    setQuantity(quantity + 1);
   };
 
   const decrement = () => {
-    // dispath(removeQuantity(id));
-    setQuantity(quantity - 1);
+    dispath(removeQuantity(id));
   };
 
   const deleteCardInVasket = (id: number) => {
