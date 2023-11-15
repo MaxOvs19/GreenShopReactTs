@@ -24,7 +24,7 @@ const Brand = ({ id, title, indexItem, selectedIndex, setActiveBrand }: IProps) 
     <p
       key={id}
       onClick={() => sortProduct(id)}
-      className={indexItem === selectedIndex ? 'active-brand' : ''}
+      className={indexItem === selectedIndex ? 'brand-item active-brand' : 'brand-item'}
     >
       {title}
     </p>

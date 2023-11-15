@@ -32,6 +32,13 @@ const SideBar = ({ brands }: IProps) => {
           );
         })}
       </div>
+
+      <h1 className="size">Size</h1>
+      <div className="sideBar-list">
+        <p className="brand-item">Small</p>
+        <p className="brand-item">Medium</p>
+        <p className="brand-item">Large</p>
+      </div>
     </div>
   );
 };

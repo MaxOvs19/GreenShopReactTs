@@ -1,4 +1,4 @@
-p {
+.brand-item {
   cursor: pointer;
   transition: 0.4s;
 
@@ -7,6 +7,7 @@ p {
     transition: 0.4s;
   }
 }
+
 .active {
   &-brand {
     color: #46a358;

@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
-
 import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
 import Promotion from 'components/Promotion/Promotion';
 import Shop from 'modules/Shop/components/Shop/Shop';
 
@@ -12,6 +11,7 @@ const HomePage = () => {
       <Header />
       <Promotion />
       <Shop />
+      <Footer />
     </>
   );
 };

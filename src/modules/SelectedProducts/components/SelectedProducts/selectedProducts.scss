@@ -5,6 +5,7 @@
 
   .table-basket {
     table {
+      border-spacing: 0 11px;
       width: 782px;
 
       thead {
@@ -69,30 +70,6 @@
       }
     }
 
-    .input-code {
-      display: flex;
-      margin-top: 8px;
-
-      &__box {
-        display: flex;
-        flex-grow: 1;
-        border-radius: 3px;
-        border: 1px solid #46a358;
-
-        input {
-          padding: 12px 15px;
-          width: 100%;
-          border: none;
-          outline: none;
-        }
-      }
-      .submit-code {
-        padding: 12px 15px;
-        border-radius: 0px 3px 3px 0px;
-        background: #46a358;
-      }
-    }
-
     .total {
       span {
         color: #46a358;
@@ -104,5 +81,29 @@
       padding: 12px 91px;
       margin-top: 24px;
     }
+  }
+}
+
+.input-code {
+  display: flex;
+  margin-top: 8px;
+
+  &__box {
+    display: flex;
+    flex-grow: 1;
+    border-radius: 3px;
+    border: 1px solid #46a358;
+
+    input {
+      padding: 12px 15px;
+      width: 100%;
+      border: none;
+      outline: none;
+    }
+  }
+  .submit-code {
+    padding: 12px 15px;
+    border-radius: 0px 3px 3px 0px;
+    background: #46a358;
   }
 }
